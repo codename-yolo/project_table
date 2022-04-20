@@ -1,5 +1,6 @@
 import axios from 'axios'
-import '../css/style.css'
+import '../scss/style.scss'
+
 import getDataApi from './callApi'
 import getDetail from './getDetailName'
 import loadDataTable from './loadDataApi'

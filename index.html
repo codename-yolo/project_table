@@ -10,27 +10,27 @@
           <title>Table</title>
      </head>
      <body>
-          <div style="overflow-x: auto">
-               <table>
-                    <thead>
-                         <tr>
-                              <th rowspan="2">Name</th>
-                              <th rowspan="2">Shares</th>
-                              <th rowspan="2">Percentage</th>
-                              <th rowspan="2">Last update</th>
-                              <th colspan="3" style="text-align: center">
-                                   Latest transaction
-                              </th>
-                         </tr>
-                         <tr>
-                              <th>Share volume</th>
-                              <th>Price range</th>
-                              <th>Transaction Date</th>
-                         </tr>
-                    </thead>
-                    <tbody></tbody>
-               </table>
-          </div>
+          <table class="parentTable">
+               <thead>
+                    <tr>
+                         <th rowspan="2" style="width: 30%; max-width: 0">
+                              Name
+                         </th>
+                         <th rowspan="2">Shares</th>
+                         <th rowspan="2">Percentage</th>
+                         <th rowspan="2">Last update</th>
+                         <th colspan="3" style="text-align: center">
+                              Latest transaction
+                         </th>
+                    </tr>
+                    <tr>
+                         <th>Share volume</th>
+                         <th>Price range</th>
+                         <th>Transaction Date</th>
+                    </tr>
+               </thead>
+               <tbody></tbody>
+          </table>
           <!-- <script src="./build/index.bundle.js"></script> -->
      </body>
 </html>

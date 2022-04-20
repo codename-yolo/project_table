@@ -1,5 +1,5 @@
 import moment from 'moment'
-
+import { fixedNumber, formatDate } from './formatted'
 function loadDataTable({ data }) {
      const tableElement = document.querySelector('table tbody')
      var datasetHtml = data.map(
@@ -29,24 +29,19 @@ function loadDataTable({ data }) {
                             </thead>
                            <tbody>
                            </tbody>
-                           <tfoot>
-                            <tr>
-                                <td colspan="4">Total</td>
-                                <td>376.8</td>
-                              </tr>
-                           </tfoot>
-                            
                           </table>
                     </div> 
        </td>
-       <td>${shares.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}</td>
-       <td>${percentage}%</td>
-       <td>${moment(last_update).format('MM-DD-YYYY')}</td>
+       <td>${fixedNumber(shares)}</td>
+       <td>${fixedNumber(percentage)}%</td>
+       <td>${formatDate(last_update)}</td>
        <td ${share_volume < 40 ? 'style="color: red"' : ''}>
        ${share_volume < 40 ? ' - ' + share_volume : '+ ' + share_volume}
        </td>
-       <td>${price_range.start} - ${price_range.end}</td>
-       <td>${moment(transaction_date).format('MM-DD-YYYY')}</td>
+       <td>${fixedNumber(price_range.start)} - ${fixedNumber(
+                    price_range.end,
+               )}</td>
+       <td>${formatDate(transaction_date)}</td>
      </tr>`
           },
      )

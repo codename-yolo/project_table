@@ -1,92 +1,96 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 @font-face {
-    font-family: font_bold;
-    src: url(../font/static/Raleway-Medium.ttf);
+  font-family: font_bold;
+  src: url(../font/static/Raleway-Medium.ttf);
 }
 
 @font-face {
-    font-family: font_thin;
-    src: url(../font/static/Raleway-Regular.ttf);
+  font-family: font_thin;
+  src: url(../font/static/Raleway-Regular.ttf);
 }
 
 html {
-    font-family: font_bold;
+  font-family: font_bold;
 }
 
 table {
-    width: 100%;
-    color: white;
-    border-collapse: collapse;
-    border: 2px solid rgb(44, 41, 41);
+  max-width: 100%;
+  width: 100%;
+  color: white;
+  border-collapse: collapse;
+  border: 2px solid #2c2929;
+}
 
+table thead tr:first-child th:first-child {
+  text-align: left;
+  padding-left: 10px;
+}
+
+table tbody tr td:first-child {
+  text-align: left;
+  padding-left: 10px;
 }
 
 table tr {
-    background-color: #1e242e;
-    border: 2px solid rgb(44, 41, 41);
-
+  background-color: #1e242e;
+  border: 2px solid #2c2929;
 }
 
 table tr:hover {
-    background-color: #435a78;
+  background-color: #435a78;
 }
 
 table tr th {
-    background-color: #273040;
-    text-transform: uppercase;
-    text-align: right;
-    padding-right: 10px;
-    border: 2px solid rgb(44, 41, 41);
-    padding: 10px 10px 10px 0;
-
-}
-
-table tr:first-child th:first-child {
-    text-align: left;
-    padding-left: 10px;
+  background-color: #273040;
+  text-transform: uppercase;
+  text-align: right;
+  padding-right: 10px;
+  border: 2px solid #2c2929;
+  padding: 10px 10px 10px 0;
 }
 
 table tr td {
-    font-family: font_thin;
-    text-align: right;
-    /* padding-right: 10px; */
-    padding: 10px;
-    border: 2px solid rgb(44, 41, 41);
-
-
+  font-family: font_thin;
+  text-align: right;
+  /* padding-right: 10px; */
+  padding: 10px;
+  border: 2px solid #2c2929;
 }
-
-table tr td:nth-child(1) {
-    text-align: left;
-    padding-left: 10px;
-
-}
-
-
 
 .hasPopup {
-    position: relative;
+  position: relative;
 }
 
-.popup {
-    position: absolute;
-    top: 0;
-    transform: translateY(0%) scale(0);
-    transition: transform 0.1s ease-in;
-    transform-origin: left;
-    display: inline;
-    background: blue;
-    z-index: 20;
-    min-width: 100%;
-    padding: 1rem;
-    border: 1px solid black;
+.hasPopup div {
+  display: none;
+  position: absolute;
+  top: 100%;
+  width: 150%;
+  left: 50%;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  background-color: #435a78;
+  z-index: 20;
+  min-width: 100%;
+  padding: 1rem;
+  border: 1px solid black;
+}
+
+.hasPopup div table {
+  width: 100%;
+}
+
+.hasPopup div table tbody tr th {
+  text-align: left;
+  padding-left: 10px;
 }
 
 .hasPopup:hover div {
-    transform: translateY(0) scale(0.5);
+  display: block;
 }

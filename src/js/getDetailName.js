@@ -3,7 +3,7 @@ import getDataApi from './callApi'
 
 function getDetail(eleHasPopup) {
      Array.from(eleHasPopup).forEach((ele) => {
-          ele.onmouseover = () => {
+          ele.onmouseenter = () => {
                getDataApi(
                     URL_API_DETAIL,
                     {
@@ -26,6 +26,7 @@ function renderDetail({ data }, ele) {
      const dataDetailHtml = data
           .map((item) => {
                const { MCH, MSN, TCB } = item
+               const totalValue = MCH.value + MSN.value + TCB.value
                return `
            <tr>
           <th>MSN</th>
@@ -47,7 +48,12 @@ function renderDetail({ data }, ele) {
       <td>${MCH.percentage}</td>
       <td>${MCH.update_date}</td>
       <td>${MCH.value}</td>
-    </tr>`
+    </tr>
+    <tr>
+    <td colspan="4">Total</td>
+    <td>${totalValue}}</td>
+  </tr>
+  `
           })
           .join(' ')
      container.innerHTML = dataDetailHtml
