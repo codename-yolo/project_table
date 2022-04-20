@@ -1,33 +1,34 @@
-const URL_API_DETAIL = 'https://625ce68595cd5855d6178b7b.mockapi.io/detail_data'
-import getDataApi from './callApi'
+const URL_API_DETAIL =
+  "https://625ce68595cd5855d6178b7b.mockapi.io/detail_data";
+import getDataApi from "./callApi";
 
 function getDetail(eleHasPopup) {
-     Array.from(eleHasPopup).forEach((ele) => {
-          ele.onmouseenter = () => {
-               getDataApi(
-                    URL_API_DETAIL,
-                    {
-                         id: Math.floor(Math.random() * 3 + 1),
-                    },
-                    'get',
-               )
-                    .then((response) => {
-                         console.log(response)
-                         renderDetail(response, ele)
-                    })
-                    .catch((error) => {
-                         console.error(error)
-                    })
-          }
-     })
+  Array.from(eleHasPopup).forEach((ele) => {
+    ele.onmouseenter = () => {
+      getDataApi(
+        URL_API_DETAIL,
+        {
+          id: Math.floor(Math.random() * 3 + 1),
+        },
+        "get"
+      )
+        .then((response) => {
+          console.log(response);
+          renderDetail(response, ele);
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+    };
+  });
 }
 function renderDetail({ data }, ele) {
-     const container = ele.querySelector('.popup table tbody')
-     const dataDetailHtml = data
-          .map((item) => {
-               const { MCH, MSN, TCB } = item
-               const totalValue = MCH.value + MSN.value + TCB.value
-               return `
+  const container = ele.querySelector(".popup table tbody");
+  const dataDetailHtml = data
+    .map((item) => {
+      const { MCH, MSN, TCB } = item;
+      const totalValue = MCH.value + MSN.value + TCB.value;
+      return `
            <tr>
           <th>MSN</th>
           <td>${MSN.quantity}</td>
@@ -53,10 +54,10 @@ function renderDetail({ data }, ele) {
     <td colspan="4">Total</td>
     <td>${totalValue}}</td>
   </tr>
-  `
-          })
-          .join(' ')
-     container.innerHTML = dataDetailHtml
+  `;
+    })
+    .join(" ");
+  container.innerHTML = dataDetailHtml;
 }
 
-export default getDetail
+export default getDetail;
