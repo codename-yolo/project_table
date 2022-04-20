@@ -1,98 +1,98 @@
 * {
-     margin: 0;
-     padding: 0;
-     box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 @font-face {
-     font-family: font_bold;
-     src: url(../font/static/Raleway-Medium.ttf);
+  font-family: font_bold;
+  src: url(../font/static/Raleway-Medium.ttf);
 }
 
 @font-face {
-     font-family: font_thin;
-     src: url(../font/static/Raleway-Regular.ttf);
+  font-family: font_thin;
+  src: url(../font/static/Raleway-Regular.ttf);
 }
 
 html {
-     font-family: font_bold;
+  font-family: font_bold;
 }
 
 table {
-     max-width: 100%;
-     width: 100%;
-     color: white;
-     border-collapse: collapse;
-     border: 2px solid rgb(44, 41, 41);
-     thead {
-          tr:first-child {
-               th:first-child {
-                    text-align: left;
-                    padding-left: 10px;
-               }
-          }
-     }
-     tbody {
-          tr {
-               td {
-                    &:first-child {
-                         text-align: left;
-                         padding-left: 10px;
-                    }
-               }
-          }
-     }
-     tr {
-          background-color: #1e242e;
-          border: 2px solid rgb(44, 41, 41);
-          &:hover {
-               background-color: #435a78;
-          }
-          th {
-               background-color: #273040;
-               text-transform: uppercase;
-               text-align: right;
-               padding-right: 10px;
-               border: 2px solid rgb(44, 41, 41);
-               padding: 10px 10px 10px 0;
-          }
-          td {
-               font-family: font_thin;
-               text-align: right;
-               /* padding-right: 10px; */
-               padding: 10px;
-               border: 2px solid rgb(44, 41, 41);
-          }
-     }
+  max-width: 100%;
+  width: 100%;
+  color: white;
+  border-collapse: collapse;
+  border: 2px solid rgb(44, 41, 41);
+  thead {
+    tr:first-child {
+      th:first-child {
+        text-align: left;
+        padding-left: 10px;
+      }
+    }
+  }
+  tbody {
+    tr {
+      td {
+        &:first-child {
+          text-align: left;
+          padding-left: 10px;
+        }
+      }
+    }
+  }
+  tr {
+    background-color: #1e242e;
+    border: 2px solid rgb(44, 41, 41);
+    &:hover {
+      background-color: #435a78;
+    }
+    th {
+      background-color: #273040;
+      text-transform: uppercase;
+      text-align: right;
+      padding-right: 10px;
+      border: 2px solid rgb(44, 41, 41);
+      padding: 10px 10px 10px 0;
+    }
+    td {
+      font-family: font_thin;
+      text-align: right;
+      /* padding-right: 10px; */
+      padding: 10px;
+      border: 2px solid rgb(44, 41, 41);
+    }
+  }
 }
 
 .hasPopup {
-     position: relative;
-     div {
-          display: none;
-          position: absolute;
-          top: 100%;
-          width: 150%;
-          left: 50%;
-          transform-origin: left;
-          background-color: #435a78;
-          z-index: 20;
-          min-width: 100%;
-          padding: 1rem;
-          border: 1px solid black;
-          table {
-               width: 100%;
-               tbody {
-                    tr {
-                         th {
-                              text-align: left;
-                              padding-left: 10px;
-                         }
-                    }
-               }
+  position: relative;
+  div {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 150%;
+    left: 50%;
+    transform-origin: left;
+    background-color: #435a78;
+    z-index: 20;
+    min-width: 100%;
+    padding: 1rem;
+    border: 1px solid black;
+    table {
+      width: 100%;
+      tbody {
+        tr {
+          th {
+            text-align: left;
+            padding-left: 10px;
           }
-     }
-     &:hover div {
-          display: block;
-     }
+        }
+      }
+    }
+  }
+  &:hover div {
+    display: block;
+  }
 }

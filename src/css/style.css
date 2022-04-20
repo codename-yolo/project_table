@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 @font-face {
@@ -74,7 +74,7 @@ table tr td {
   width: 150%;
   left: 50%;
   -webkit-transform-origin: left;
-          transform-origin: left;
+  transform-origin: left;
   background-color: #435a78;
   z-index: 20;
   min-width: 100%;
