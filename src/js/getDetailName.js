@@ -52,7 +52,7 @@ function renderDetail({ data }, ele) {
     </tr>
     <tr>
     <td colspan="4">Total</td>
-    <td>${totalValue}}</td>
+    <td>${totalValue}</td>
   </tr>
   `;
     })

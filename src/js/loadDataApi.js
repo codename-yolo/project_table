@@ -13,23 +13,22 @@ function loadDataTable({ data }) {
     }) => {
       return `<tr>
        <td class="hasPopup">
-       ${name}    
+       ${name}
        <div class="popup">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Ticker</th>
-                                    <th>Quantity</th>
-                                    <th>Percentage</th>
-                                    <th>Update date</th>
-                                    <th>Value</th>
-                          
-                                  </tr>
-                            </thead>
-                           <tbody>
-                           </tbody>
-                          </table>
-                    </div> 
+          <table>
+            <thead>
+               <tr>
+                  <th>Ticker</th>
+                  <th>Quantity</th>
+                  <th>Percentage</th>
+                  <th>Update date</th>
+                  <th>Value</th>
+                </tr>
+             </thead>
+             <tbody>
+             </tbody>
+           </table>
+                    </div>
        </td>
        <td>${fixedNumber(shares)}</td>
        <td>${fixedNumber(percentage)}%</td>
@@ -52,4 +51,5 @@ function loadDataTable({ data }) {
     resolve(nameEle);
   });
 }
+
 export default loadDataTable;

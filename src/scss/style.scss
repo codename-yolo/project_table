@@ -26,6 +26,14 @@ table {
   border: 2px solid rgb(44, 41, 41);
   thead {
     tr:first-child {
+      th {
+        border: unset;
+      }
+      th:last-child {
+        border-left: 2px solid rgb(44, 41, 41);
+      }
+    }
+    tr:nth-child(2) {
       th:first-child {
         text-align: left;
         padding-left: 10px;
@@ -94,5 +102,6 @@ table {
   }
   &:hover div {
     display: block;
+    transition-delay: 3s;
   }
 }
